@@ -1,0 +1,39 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: content
+            field:
+              type: markdown
+              localizable: true
+          -
+            handle: pages
+            field:
+              type: list
+              display: 'List Field'
+              icon: list
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+title: Comment

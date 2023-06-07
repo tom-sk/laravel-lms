@@ -1,0 +1,19 @@
+{
+    "name": "example/my-addon",
+    "autoload": {
+        "psr-4": {
+            "Example\\MyAddon\\": "src"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "My Addon",
+            "description": "My Addon addon"
+        },
+        "laravel": {
+            "providers": [
+                "Example\\MyAddon\\ServiceProvider"
+            ]
+        }
+    }
+}

@@ -1,0 +1,11 @@
+<nav class="">
+    <div class="w-full lg:w-auto lg:flex lg:clear items-center mb-6" >
+        {{ nav include_home="true" }}
+            <a href="{{ url }}" class="block {{ is_current || is_parent ?= 'font-medium text-gray-800' }} mt-4 lg:inline-block text-gray-600 hover:text-gray-800 lg:mt-0 mr-4">
+                {{ title }}
+            </a>
+        {{ /nav }}
+
+        <a href="/login">Login</a>
+    </div>
+</nav>
