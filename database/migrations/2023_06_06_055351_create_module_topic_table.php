@@ -16,6 +16,7 @@ return new class extends Migration
             $table->timestamps();
             $table->unsignedBiginteger('module_id')->unsigned();
             $table->unsignedBiginteger('topic_id')->unsigned();
+            $table->integer('sort_order')->nullable();
 
             $table->foreign('module_id')->references('id')
                 ->on('modules')->onDelete('cascade');

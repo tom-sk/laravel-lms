@@ -1,0 +1,29 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: name
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: topics
+            field:
+              mode: default
+              resource: topic
+              create: true
+              reorderable: true
+              type: has_many
+              display: Topics
+              icon: has_many
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              order_column: module_topic.sort_order
+title: Modules

@@ -15,10 +15,11 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('name');
-            $table-integer('sort_order');
-            $table->unsignedBiginteger('topic_id')->unsigned();
-            $table->foreign('topic_id')->references('id')
-                ->on('topics')->onDelete('cascade');
+            $table->integer('sort_order')->nullable();
+            $table->unsignedBiginteger('topic_id')->nullable();
+//            $table->unsignedBiginteger('topic_id')->unsigned()->nullable();
+//            $table->foreign('topic_id')->references('id')
+//                ->on('topics')->onDelete('cascade');
         });
     }
 

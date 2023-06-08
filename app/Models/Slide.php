@@ -12,8 +12,10 @@ class Slide extends Model
     use HasFactory;
     use HasRunwayResource;
 
-    public function topics(): BelongsTo
-    {
-        return $this->belongsTo(Topic::class);
-    }
+    protected $fillable = ['topic_id', 'name', 'sort_order'];
+
+//    public function topics(): BelongsTo
+//    {
+//        return $this->belongsTo(Topic::class);
+//    }
 }

@@ -17,11 +17,30 @@ tabs:
               type: markdown
               localizable: true
           -
-            handle: pages
+            handle: topics
             field:
-              type: list
-              display: 'List Field'
-              icon: list
+              mode: default
+              resource: topic
+              create: true
+              reorderable: true
+              type: has_many
+              display: Topics
+              icon: has_many
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              order_column: sort_order
+          -
+            handle: modules
+            field:
+              mode: default
+              resource: module
+              create: true
+              reorderable: false
+              type: has_many
+              display: Modules
+              icon: has_many
               listable: hidden
               instructions_position: above
               visibility: visible

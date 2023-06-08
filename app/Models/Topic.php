@@ -13,13 +13,15 @@ class Topic extends Model
     use HasFactory;
     use HasRunwayResource;
 
-    public function topics(): BelongsToMany
+    protected $fillable = ['module_id', 'name'];
+
+    public function modules(): BelongsToMany
     {
         return $this->belongsToMany(Module::class);
     }
-
+//
     public function slides(): HasMany
     {
-        return $this->hasMany(Slides::class);
+        return $this->hasMany(Slide::class);
     }
 }

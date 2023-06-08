@@ -14,25 +14,14 @@ return [
     'resources' => [
          \App\Models\Module::class => [
              'name' => 'Modules',
-
-             'blueprint' => [
-                 'tabs' => [
-                     'main' => [
-                         'fields' => [
-                             [
-                                 'handle' => 'name',
-                                 'field' => [
-                                     'type' => 'text',
-                                     'validate' => 'required',
-                                 ],
-                             ],
-                         ],
-                     ],
-                 ],
-             ],
+             'blueprint' => 'modules',
          ],
         \App\Models\Topic::class => [
             'name' => 'Topics',
+            'blueprint' => 'topics',
+        ],
+        \App\Models\Slide::class => [
+            'name' => 'Slides',
 
             'blueprint' => [
                 'tabs' => [

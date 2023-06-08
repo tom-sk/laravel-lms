@@ -15,7 +15,7 @@ module.exports = {
         node: true,
     },
     plugins: [],
-    ignorePatterns: ["/public/vendor/", "/addons"],
+    ignorePatterns: ["/public/vendor/", "/addons", '*.antlers.html', '*.min.js'],
     rules: {
         "prettier/prettier": "error",
         camelcase: ["error", { properties: "never" }],

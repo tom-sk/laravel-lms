@@ -11,7 +11,7 @@
     "require": {
         "php": "^8.1",
         "doublethreedigital/runway": "^5.0",
-        "example/my-addon": "dev-main",
+        "example/my-addon": "dev-master",
         "guzzlehttp/guzzle": "^7.2",
         "inertiajs/inertia-laravel": "^0.6.8",
         "laravel/framework": "^10.8",
