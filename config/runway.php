@@ -12,12 +12,12 @@ return [
     */
 
     'resources' => [
-         \App\Models\Module::class => [
-             'name' => 'Modules',
-             'blueprint' => 'modules',
-         ],
+        \App\Models\Module::class => [
+            'name'      => 'Modules',
+            'blueprint' => 'modules',
+        ],
         \App\Models\Topic::class => [
-            'name' => 'Topics',
+            'name'      => 'Topics',
             'blueprint' => 'topics',
         ],
         \App\Models\Slide::class => [
@@ -29,8 +29,8 @@ return [
                         'fields' => [
                             [
                                 'handle' => 'name',
-                                'field' => [
-                                    'type' => 'text',
+                                'field'  => [
+                                    'type'     => 'text',
                                     'validate' => 'required',
                                 ],
                             ],
@@ -38,7 +38,7 @@ return [
                     ],
                 ],
             ],
-        ]
+        ],
     ],
 
     /*

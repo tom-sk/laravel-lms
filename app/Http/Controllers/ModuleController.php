@@ -16,7 +16,7 @@ class ModuleController extends Controller
         $modules = Module::all();
 
         return Inertia::render('ModulesPage', [
-            'modules' => $modules
+            'modules' => $modules,
         ]);
     }
 
@@ -43,7 +43,7 @@ class ModuleController extends Controller
     {
         return Inertia::render('Module/index', [
             'module' => $module,
-            'topics' => $module->topics()->get()
+            'topics' => $module->topics()->get(),
         ]);
     }
 
@@ -74,6 +74,7 @@ class ModuleController extends Controller
     public function attachTopic(Module $module)
     {
         $module->topics()->sync(['1']);
+
         return $module->topics();
     }
 }

@@ -19,6 +19,7 @@ class Topic extends Model
     {
         return $this->belongsToMany(Module::class);
     }
+
 //
     public function slides(): HasMany
     {
