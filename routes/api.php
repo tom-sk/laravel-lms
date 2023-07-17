@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\ModuleController;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*

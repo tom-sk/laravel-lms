@@ -18,29 +18,23 @@ use Inertia\Inertia;
 |
 */
 
-
-
 Route::get('/register', function () {
     return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
+        'canLogin'       => Route::has('login'),
+        'canRegister'    => Route::has('register'),
         'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
+        'phpVersion'     => PHP_VERSION,
     ]);
 });
-
-
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-
     Route::get('/modules', [ModuleController::class, 'index'])->name('modules');
     Route::get('/module/{module}', [ModuleController::class, 'show'])->name('module');
     Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');
-
 });
 
 require __DIR__.'/auth.php';

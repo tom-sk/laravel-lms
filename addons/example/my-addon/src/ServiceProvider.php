@@ -16,7 +16,7 @@ class ServiceProvider extends AddonServiceProvider
     ];
 
     protected $fieldtypes = [
-        TogglePassword::class
+        TogglePassword::class,
     ];
 
     public function bootAddon()

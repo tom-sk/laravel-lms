@@ -3,7 +3,6 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 
 class ModuleFactory extends Factory
 {
@@ -13,5 +12,4 @@ class ModuleFactory extends Factory
             'name' => fake()->name(),
         ];
     }
-
 }

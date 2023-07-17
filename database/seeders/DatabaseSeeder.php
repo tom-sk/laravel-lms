@@ -14,16 +14,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-
         // \App\Models\User::factory(10)->create();
 
-         \App\Models\User::factory()->create([
-             'name' => 'tom',
-             'email' => 'thomasscullyking@hotmail.com',
-             'password' => Hash::make('password'),
-             'super' => 1,
-         ]);
-
+        \App\Models\User::factory()->create([
+            'name'     => 'tom',
+            'email'    => 'thomasscullyking@hotmail.com',
+            'password' => Hash::make('password'),
+            'super'    => 1,
+        ]);
 
         \App\Models\Module::factory()->create([
             'name' => 'Module 1',
@@ -36,8 +34,6 @@ class DatabaseSeeder extends Seeder
         \App\Models\Module::factory()->create([
             'name' => 'Module 3',
         ]);
-
-
 
         DB::table('topics')->insert([
             'name' => 'Topic 1',
